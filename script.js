@@ -15,42 +15,6 @@ Funkce na vstupu obdrží název události, počet lidí a funkci, pomocí kter�
 
 "Událost Inaugurace prezidenta s catering od Flavour Haven pro 100 lidí za 300000 Kč" */
 
-/*
-const FlavourHeaven = (pocetlidi) => {
-    let cena = pocetlidi * 3000
-    cenaformat = cena.toLocaleString() //space as thousand separator
-    return `Catering od Flavour Heaven pro ${pocetlidi} lidí za ${cenaformat} Kč`
-}
-
-const YourMama = (pocetlidi) => {
-    let cena = pocetlidi * 1000
-    cenaformat = cena.toLocaleString()
-    return `Catering od Your Mama pro ${pocetlidi} lidí za ${cenaformat} Kč`
-}
-
-const JustFood = (pocetlidi) => {
-    let cena = pocetlidi * 300
-    cenaformat = cena.toLocaleString()
-    return `Catering od Just Food pro ${pocetlidi} lidí za ${cenaformat} Kč`
-}
-
-const createEvent = (nazevUdalosti,pocetlidi,fceCatering) => {
-    let text = document.querySelector('p')
-    text.innerHTML = "Událost: " + nazevUdalosti +" s " + fceCatering(pocetlidi)
-}
-
-//createEvent("Inaugurace prezidenta","100",YourMama)
-
-let udalost = prompt("Zadej nazev udalosti")
-let lide = prompt("Zadej pocet lidi")
-//let cateringfirm = prompt("Zadej jmeno cateringove firmy: JustFood / YourMama /FlavourHeaven")
-
-
-setTimeout(() => {createEvent(udalost,lide, JustFood)},1000)
-setTimeout(() => {createEvent(udalost,lide,YourMama)},5000)
-setTimeout(() => {createEvent(udalost,lide,FlavourHeaven)},10000) */
-
-
 
 const FlavourHeaven = (pocetlidi) => {
     let cena = pocetlidi * 3000
