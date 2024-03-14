@@ -39,7 +39,7 @@ const createEvent = (nazevUdalosti,pocetlidi,fceCatering) => {
     text.innerHTML = "Událost: " + nazevUdalosti +" s " + fceCatering(pocetlidi)
 }
 
-
+// to make sure the prompted variable is recognized as a function in the createEvent function
 const functionsMap = {
     FlavourHeaven,
     YourMama,
@@ -47,10 +47,15 @@ const functionsMap = {
 };
 
 
-let udalost = prompt("Zadej nazev udalosti")
-let lide = prompt("Zadej pocet lidi")
-let cateringfirm = prompt("Zadej jmeno cateringove firmy: JustFood / YourMama /FlavourHeaven")
+let udalost = prompt("Zadej název události:")
+let lide = prompt("Zadej počet lidí")
+let cateringfirm = prompt("Zadej jméno cateringové firmy: JustFood / YourMama /FlavourHeaven")
 
-createEvent(udalost,lide,functionsMap[cateringfirm])
+// hasOwnProperty() method to check if the functionsMap object contains the catering name
+if (!functionsMap.hasOwnProperty(cateringfirm)) {
+    alert("Špatně zadané jméno cateringu.")
+} else {
+    createEvent(udalost,lide,functionsMap[cateringfirm])
+}
+
 //createEvent("Inaugurace prezidenta","100",YourMama)
-
